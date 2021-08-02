@@ -1,0 +1,448 @@
+// bar
+.topBar{
+    position: fixed;
+    background-color: white;
+    .logo{
+    width: $px-1*32;
+    height: 38px;
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/d%E2%80%99Perfume.png");
+    @include logo-hidden;
+}
+    li{
+        margin-left: $px-8;
+        padding: 20px 0;
+        a{
+            color: #8D8D8D;
+            .material-icons{
+                // 跟文字對齊
+                vertical-align: text-top;
+                padding-right: $px-2;
+                color: #8D8D8D;
+            }
+            &:hover,.material-icons:hover{
+                color: #000000;
+            }
+        }
+    }
+    .rwd-menu-list{
+        display: none;
+    }
+}
+
+// RWD menu
+    .rwd-cart{
+        position: relative;
+        em{
+            font-size: $px-3;
+            line-height: 13px;
+            width: 16px;
+            height: 13px;
+            text-align: center;
+            position: absolute;
+            display: block;
+            top: 15px;
+            right:0px;
+            background-color: #916000;
+            color: white;
+            // padding: 0 7px;
+            border-radius: 7px;
+            // border-radius: 50%;
+            //? width: 10px;height: 10px; 給定寬高數字會不見
+        }
+    }
+    .hamburger{
+        p{
+            box-sizing: border-box;
+            width: 30px;
+            border: 2px solid #8D8D8D;
+            border-radius: 5px;
+            background-color: #8D8D8D;
+            margin-top: 4px;
+        }
+    }
+    .rwd-menu-list{
+        position: absolute;
+        max-width: 100%;
+        top: 70px;
+        right: 0;
+        left: 0;
+        li{
+            margin: 0 auto;
+            padding: 6px 0; //16-(30-20)
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid white;
+            background-color: #707070;
+            &:hover{
+                background-color: #000000;
+            }
+            a{
+                color: white;
+                // BS的預設好像會把hover的a變黑色
+                &:hover{
+                    color: white;
+                }
+            }
+        }
+    }
+        
+// banner
+.banner{
+    margin: 0 auto;
+    height: 870px;
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index1.jpg");
+    background-position: center;
+    background-attachment: fixed;
+        .txt1-container{
+            margin-top: 295px;
+        }
+        .txt1{
+            color: white;
+            h2{
+                font-size: $px-10;
+                line-height: 60px;
+            }
+            p{
+                font-size: $px-6;
+                line-height: $lh-6;
+            }
+            a{
+                font-size: $px-7;
+                color: white;
+                width: 350px;
+                padding: 13px 0px;
+                margin-top: 20px;
+                &:hover{
+                    background-color: rgba(255, 255, 255, 0.205);
+                }
+            }
+        }
+    }
+@include iphone6{
+    .banner{
+        height: 550px; //480+70 bar
+        background-position: -150px 10px;
+        .txt1-container{
+            margin-top: 171px;
+        }
+    }   
+}
+
+// 商品列表一
+.product-list1{
+    margin-top: 60px;
+    .txt2{
+        margin: 129px 55px 0;
+        font-size: $px-5;
+        line-height: $lh-5;
+        h3{
+            font-size: $px-8;
+            line-height: $lh-8;
+        }
+    }
+    .txt3-container{
+        padding: 40px 0; //92-52
+        margin: 0 auto;
+
+        .txt3{
+            margin-top: 52px;
+            font-size: $px-6;
+            line-height: $lh-6;
+            p{
+                font-size: $px-4;
+                line-height: $lh-4;
+                margin-top: 4px;
+            }
+        }
+        a{
+            margin-top: 60px;
+            border: 2px black solid;
+            padding: 18px;
+            max-width: 350px;
+            font-size: $px-6;
+            line-height: $lh-5;
+            color: black;
+            &:hover{
+                background-color:rgba(0, 0, 0, 0.055);
+            }
+        }
+    }
+    .img_container1{
+        width: 555px;
+        height: 555px;
+    }
+    .img_container2{
+        width: 555px;
+        height: 1080px;
+    }
+    .pd1{
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index2.jpg");
+    }
+    .pd2{
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index3.png");
+    }
+    .pd3{
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index4.jpg");
+    }
+    .pd4{
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index5.jpg");
+        background-position: -80px 0px;
+    }
+}
+
+@include pad{
+    .product-list1{
+        .pd1, .pd2, .pd3, .pd4{
+            max-width: 100%;
+            background-position: center;
+        }
+        .rr{
+            flex-direction: column-reverse;  
+        }
+        .txt2{
+            max-width: 400px;
+            padding-top: 8px;
+            padding-bottom: $px-8;
+            margin: 0;
+        }
+        .more{
+            margin-top: $px-2;
+        }
+    }
+}
+
+@include iphone6{
+    .product-list1{
+        .pd1, .pd2, .pd3, .pd4{
+            height: 350px;
+        }
+        .pd3{
+            background-position: -60px;
+        }
+        .pd4{
+            height: 680px;
+        }
+        .txt2{
+            padding-bottom: $px-8;
+        }
+        .txt3-container{
+            padding-top: $px-2;
+            .txt3{
+                margin-top: 0px;
+                margin-bottom: $px-5;
+            }
+        }
+    }
+}
+
+// 商品列表二
+.bc-gray{
+    background-color:#E0E0E0;
+    margin-top: $px-15;
+    padding: 40px 0;
+    font-size: $px-4;
+    line-height: $lh-4;
+    h3{
+        font-size: $px-6;
+        line-height: $lh-6;
+        margin-top: $px-2;
+    }
+    .price{
+        padding-top: $px-4;
+        span{
+            margin-left: $px-2;
+            color: #8D8D8D;
+            text-decoration: line-through;
+        }
+    }
+    .img_container3{
+        width: 350px;
+        height: 540px;
+        background-size: cover;
+    }
+    .pd5{
+        background-position: 0 -150px;
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index6.jpg");
+    }
+    .pd6{
+        background-position: 0 -120px;
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index7.jpg");
+    }
+    .pd7{
+        background-position: center;
+         background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index8.jpg");
+    }
+}
+@include pad{
+    .bc-gray{
+        margin-top:0;
+        padding:0;
+        padding-bottom: $px-9;
+        .img_container3{
+            width: 345px;
+            height: 350px;
+        }
+        li{
+            padding-top: $px-6;
+        }
+        .price{
+            padding-top: $px-1;
+        }
+    }
+}
+
+//商品列表三
+.txt4-container{
+    max-width: 350px;
+    margin-top: 142px;
+    margin-left: 30px;
+}
+
+.txt4{
+    font-size: $px-4;
+    line-height: $lh-4;
+
+    h3{
+        font-size: $px-8;
+        line-height: $lh-8;
+    }
+    p{
+        padding-bottom: $px-4;
+    }
+    .more{
+        margin-top: 8px;
+    }
+}
+
+.pd8{
+    margin-top: $px-15;
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index9.jpg");
+}
+
+.img_container4{
+    width: 730px;
+    height: 520px;
+}
+
+@include pad{
+    .txt4-container{
+        margin: 0;
+    }
+    .txt4{
+        p{
+            padding-bottom: $px-2;
+        }
+    }
+    .pd8{
+        margin-top: $px-10;
+        max-width: 100%;
+        background-position: -200px;
+    }
+    .img_container4{
+        width: 555px;
+    }
+    .txt4-container{
+        margin-top: $px-2;
+    }
+}
+
+// footer banner
+.footer-banner{
+    margin-top: 60px;
+    height: 600px;
+    // max-width: 1920px;
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index10.jpg");
+    background-position: center;
+    .txt5{
+        padding-top: 312px;
+        color: #8D8D8D;
+        font-size: $px-8;
+        line-height: $lh-8;
+    }
+    input{
+        height: 60px;
+        box-sizing: border-box;
+        margin-top: $px-5;
+        border: 2px solid #916000;
+    }
+    .mail{
+        padding: 20px 57px 21px 16px;
+        font-size: $px-4;
+        line-height: $lh-4;
+        width: 219px; // 350-131
+    }
+    .subscribe{
+        width: 131px;
+        height: 60px;
+        background-color: #916000;
+        color: white;
+        border-radius: 0px 4px 4px 0px;
+        margin-left: - $px-2;
+        &:hover{
+            cursor: pointer;
+            background-color: #6C4700;
+        }
+    }
+}
+
+@include pad{
+    .footer-banner{
+        margin-top: 40px;
+        background-position: left;
+        .mail{
+            width: 216px;
+        }
+        .subscribe{
+            width: 129px;
+        }  
+    }
+}
+
+// footer
+.footer{
+    background-color: #916000;
+    color: white;
+    .mt-mb-32{
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+    .logo{
+        width: 128px;
+        height: 38px;
+        margin-top: 20px;
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/d%E2%80%99Perfumewhite.png");
+        @include logo-hidden;
+    }
+    .txt6{
+        font-size: 14px;
+        line-height: 21px;
+        margin-left: 10px;
+    }
+    .social{
+        li{
+        margin-left: $px-9;
+        font-size: $px-5;
+        line-height: $lh-5;
+        }
+        a{
+            color: white;
+            &:hover{
+                color: #E0E0E0;
+            }
+        }
+    }
+
+}
+@include pad{
+    .logo{
+        margin-left: 20px;
+    }
+    .social{
+        margin-right: 20px;
+    }
+}
+@include iphone6{
+    .logo{
+        margin: 0;
+    }
+}

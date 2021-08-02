@@ -1,0 +1,55 @@
+// 通用類別
+// del
+.df{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.jcsb{
+    justify-content: space-between;
+}
+
+.container{
+    margin: 0 auto;
+    // max-width: 1110px;
+
+    @include iphone6{
+        max-width: 345px;
+    }
+}
+
+.bold {
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    display: block;
+}
+
+body{
+    line-height: 30px;
+    @include ff-content;
+}
+
+.bc{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.btn{
+    border: 2px solid white;
+    border-radius: 50px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.more{
+    font-size: $px-4;
+    line-height: $lh-4;
+    margin-top: 16px;
+    color: #AC8A46;
+    &:hover{
+        color: #d19318;
+    }
+}

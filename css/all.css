@@ -1,0 +1,640 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.df {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.jcsb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container {
+  margin: 0 auto;
+}
+@media (max-width: 376px) {
+  .container {
+    max-width: 345px;
+  }
+  .container .fxdc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+body {
+  line-height: 30px;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.bc {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.btn {
+  border: 2px solid white;
+  border-radius: 50px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.more {
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 16px;
+  color: #AC8A46;
+}
+.more:hover {
+  color: #d19318;
+}
+
+.topBar {
+  position: fixed;
+  background-color: white;
+}
+.topBar .logo {
+  width: 128px;
+  height: 38px;
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/d%E2%80%99Perfume.png");
+  display: block;
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+.topBar li {
+  margin-left: 32px;
+  padding: 20px 0;
+}
+.topBar li a {
+  color: #8D8D8D;
+}
+.topBar li a .material-icons {
+  vertical-align: text-top;
+  padding-right: 8px;
+  color: #8D8D8D;
+}
+.topBar li a:hover, .topBar li a .material-icons:hover {
+  color: #000000;
+}
+.topBar .rwd-menu-list {
+  display: none;
+}
+
+.rwd-cart {
+  position: relative;
+}
+.rwd-cart em {
+  font-size: 12px;
+  line-height: 13px;
+  width: 16px;
+  height: 13px;
+  text-align: center;
+  position: absolute;
+  display: block;
+  top: 15px;
+  right: 0px;
+  background-color: #916000;
+  color: white;
+  border-radius: 7px;
+}
+
+.hamburger p {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 30px;
+  border: 2px solid #8D8D8D;
+  border-radius: 5px;
+  background-color: #8D8D8D;
+  margin-top: 4px;
+}
+
+.rwd-menu-list {
+  position: absolute;
+  max-width: 100%;
+  top: 70px;
+  right: 0;
+  left: 0;
+}
+.rwd-menu-list li {
+  margin: 0 auto;
+  padding: 6px 0;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid white;
+  background-color: #707070;
+}
+.rwd-menu-list li:hover {
+  background-color: #000000;
+}
+.rwd-menu-list li a {
+  color: white;
+}
+.rwd-menu-list li a:hover {
+  color: white;
+}
+
+.banner {
+  margin: 0 auto;
+  height: 870px;
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index1.jpg");
+  background-position: center;
+  background-attachment: fixed;
+}
+.banner .txt1-container {
+  margin-top: 295px;
+}
+.banner .txt1 {
+  color: white;
+}
+.banner .txt1 h2 {
+  font-size: 40px;
+  line-height: 60px;
+}
+.banner .txt1 p {
+  font-size: 24px;
+  line-height: 36px;
+}
+.banner .txt1 a {
+  font-size: 28px;
+  color: white;
+  width: 350px;
+  padding: 13px 0px;
+  margin-top: 20px;
+}
+.banner .txt1 a:hover {
+  background-color: rgba(255, 255, 255, 0.205);
+}
+
+@media (max-width: 376px) {
+  .banner {
+    height: 550px;
+    background-position: -150px 10px;
+  }
+  .banner .txt1-container {
+    margin-top: 171px;
+  }
+
+  .fxdc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.product-list1 {
+  margin-top: 60px;
+}
+.product-list1 .txt2 {
+  margin: 129px 55px 0;
+  font-size: 20px;
+  line-height: 30px;
+}
+.product-list1 .txt2 h3 {
+  font-size: 32px;
+  line-height: 48px;
+}
+.product-list1 .txt3-container {
+  padding: 40px 0;
+  margin: 0 auto;
+}
+.product-list1 .txt3-container .txt3 {
+  margin-top: 52px;
+  font-size: 24px;
+  line-height: 36px;
+}
+.product-list1 .txt3-container .txt3 p {
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 4px;
+}
+.product-list1 .txt3-container a {
+  margin-top: 60px;
+  border: 2px black solid;
+  padding: 18px;
+  max-width: 350px;
+  font-size: 24px;
+  line-height: 30px;
+  color: black;
+}
+.product-list1 .txt3-container a:hover {
+  background-color: rgba(0, 0, 0, 0.055);
+}
+.product-list1 .img_container1 {
+  width: 555px;
+  height: 555px;
+}
+.product-list1 .img_container2 {
+  width: 555px;
+  height: 1080px;
+}
+.product-list1 .pd1 {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index2.jpg");
+}
+.product-list1 .pd2 {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index3.png");
+}
+.product-list1 .pd3 {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index4.jpg");
+}
+.product-list1 .pd4 {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index5.jpg");
+  background-position: -80px 0px;
+}
+
+@media (max-width: 830px) {
+  .product-list1 .pd1, .product-list1 .pd2, .product-list1 .pd3, .product-list1 .pd4 {
+    max-width: 100%;
+    background-position: center;
+  }
+  .product-list1 .rr {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .product-list1 .txt2 {
+    max-width: 400px;
+    padding-top: 8px;
+    padding-bottom: 32px;
+    margin: 0;
+  }
+  .product-list1 .more {
+    margin-top: 8px;
+  }
+
+  .fxdc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media (max-width: 376px) {
+  .product-list1 .pd1, .product-list1 .pd2, .product-list1 .pd3, .product-list1 .pd4 {
+    height: 350px;
+  }
+  .product-list1 .pd3 {
+    background-position: -60px;
+  }
+  .product-list1 .pd4 {
+    height: 680px;
+  }
+  .product-list1 .txt2 {
+    padding-bottom: 32px;
+  }
+  .product-list1 .txt3-container {
+    padding-top: 8px;
+  }
+  .product-list1 .txt3-container .txt3 {
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+
+  .fxdc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.bc-gray {
+  background-color: #E0E0E0;
+  margin-top: 60px;
+  padding: 40px 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+.bc-gray h3 {
+  font-size: 24px;
+  line-height: 36px;
+  margin-top: 8px;
+}
+.bc-gray .price {
+  padding-top: 16px;
+}
+.bc-gray .price span {
+  margin-left: 8px;
+  color: #8D8D8D;
+  text-decoration: line-through;
+}
+.bc-gray .img_container3 {
+  width: 350px;
+  height: 540px;
+  background-size: cover;
+}
+.bc-gray .pd5 {
+  background-position: 0 -150px;
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index6.jpg");
+}
+.bc-gray .pd6 {
+  background-position: 0 -120px;
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index7.jpg");
+}
+.bc-gray .pd7 {
+  background-position: center;
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index8.jpg");
+}
+
+@media (max-width: 830px) {
+  .bc-gray {
+    margin-top: 0;
+    padding: 0;
+    padding-bottom: 36px;
+  }
+  .bc-gray .img_container3 {
+    width: 345px;
+    height: 350px;
+  }
+  .bc-gray li {
+    padding-top: 24px;
+  }
+  .bc-gray .price {
+    padding-top: 4px;
+  }
+
+  .fxdc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.txt4-container {
+  max-width: 350px;
+  margin-top: 142px;
+  margin-left: 30px;
+}
+
+.txt4 {
+  font-size: 16px;
+  line-height: 24px;
+}
+.txt4 h3 {
+  font-size: 32px;
+  line-height: 48px;
+}
+.txt4 p {
+  padding-bottom: 16px;
+}
+.txt4 .more {
+  margin-top: 8px;
+}
+
+.pd8 {
+  margin-top: 60px;
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index9.jpg");
+}
+
+.img_container4 {
+  width: 730px;
+  height: 520px;
+}
+
+@media (max-width: 830px) {
+  .txt4-container {
+    margin: 0;
+  }
+
+  .txt4 p {
+    padding-bottom: 8px;
+  }
+
+  .pd8 {
+    margin-top: 40px;
+    max-width: 100%;
+    background-position: -200px;
+  }
+
+  .img_container4 {
+    width: 555px;
+  }
+
+  .txt4-container {
+    margin-top: 8px;
+  }
+
+  .fxdc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.footer-banner {
+  margin-top: 60px;
+  height: 600px;
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index10.jpg");
+  background-position: center;
+}
+.footer-banner .txt5 {
+  padding-top: 312px;
+  color: #8D8D8D;
+  font-size: 32px;
+  line-height: 48px;
+}
+.footer-banner input {
+  height: 60px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 20px;
+  border: 2px solid #916000;
+}
+.footer-banner .mail {
+  padding: 20px 57px 21px 16px;
+  font-size: 16px;
+  line-height: 24px;
+  width: 219px;
+}
+.footer-banner .subscribe {
+  width: 131px;
+  height: 60px;
+  background-color: #916000;
+  color: white;
+  border-radius: 0px 4px 4px 0px;
+  margin-left: -8px;
+}
+.footer-banner .subscribe:hover {
+  cursor: pointer;
+  background-color: #6C4700;
+}
+
+@media (max-width: 830px) {
+  .footer-banner {
+    margin-top: 40px;
+    background-position: left;
+  }
+  .footer-banner .mail {
+    width: 216px;
+  }
+  .footer-banner .subscribe {
+    width: 129px;
+  }
+
+  .fxdc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.footer {
+  background-color: #916000;
+  color: white;
+}
+.footer .mt-mb-32 {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.footer .logo {
+  width: 128px;
+  height: 38px;
+  margin-top: 20px;
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/d%E2%80%99Perfumewhite.png");
+  display: block;
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+.footer .txt6 {
+  font-size: 14px;
+  line-height: 21px;
+  margin-left: 10px;
+}
+.footer .social li {
+  margin-left: 36px;
+  font-size: 20px;
+  line-height: 30px;
+}
+.footer .social a {
+  color: white;
+}
+.footer .social a:hover {
+  color: #E0E0E0;
+}
+
+@media (max-width: 830px) {
+  .logo {
+    margin-left: 20px;
+  }
+
+  .social {
+    margin-right: 20px;
+  }
+
+  .fxdc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media (max-width: 376px) {
+  .logo {
+    margin: 0;
+  }
+
+  .fxdc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}/*# sourceMappingURL=all.css.map */
