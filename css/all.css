@@ -271,7 +271,6 @@ body {
   margin-top: 60px;
   border: 2px black solid;
   padding: 18px;
-  max-width: 350px;
   font-size: 20px;
   color: black;
 }
@@ -412,20 +411,12 @@ body {
   height: 600px;
   background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index10.jpg");
   background-position: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
 }
 .footer-banner .txt5 {
   color: #8D8D8D;
   font-size: 32px;
 }
 .footer-banner .subscribe {
-  width: 350px;
   margin-bottom: 112px;
 }
 .footer-banner .subscribe input {
@@ -436,14 +427,10 @@ body {
   border: 2px solid #916000;
 }
 .footer-banner .mail {
-  max-width: 219px;
-  width: 100%;
   padding: 20px 57px 21px 16px;
   font-size: 16px;
 }
 .footer-banner .subscribeBtn {
-  max-width: 131px;
-  width: 100%;
   height: 60px;
   background-color: #916000;
   color: white;
@@ -461,14 +448,6 @@ body {
   }
   .footer-banner h2, .footer-banner .subscribe {
     margin-left: 20px;
-  }
-
-  .mail {
-    width: 216px;
-  }
-
-  .subscribeBtn {
-    width: 129px;
   }
 }
 @media (max-width: 376px) {
