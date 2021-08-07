@@ -1,7 +1,9 @@
 // 通用類別
+
 .container{
     margin: 0 auto;
-    // max-width: 1110px;
+    max-width: 1110px;
+    width: 100%;
 
     @include iphone6{
         max-width: 345px;
@@ -18,11 +20,10 @@ a{
 }
 
 body{
-    line-height: 30px;
-    @include ff-content;
+    @include content-font;
 }
 
-.bc{
+.bg{
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -36,7 +37,6 @@ body{
 
 .more{
     font-size: $px-4;
-    line-height: $lh-4;
     margin-top: 16px;
     color: #AC8A46;
     &:hover{

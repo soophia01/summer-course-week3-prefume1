@@ -54,19 +54,12 @@ table {
 
 .container {
   margin: 0 auto;
+  max-width: 1110px;
+  width: 100%;
 }
 @media (max-width: 376px) {
   .container {
     max-width: 345px;
-  }
-  .container .fxdc {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 
@@ -80,11 +73,11 @@ a {
 }
 
 body {
-  line-height: 30px;
   font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
 }
 
-.bc {
+.bg {
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -98,7 +91,6 @@ body {
 
 .more {
   font-size: 16px;
-  line-height: 24px;
   margin-top: 16px;
   color: #AC8A46;
 }
@@ -106,11 +98,23 @@ body {
   color: #d19318;
 }
 
-.topBar {
-  position: fixed;
+.top-bar {
+  position: sticky;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
   background-color: white;
+  border-bottom: 3px solid #8D8D8D;
+  border-radius: 0 0 3px 3px;
 }
-.topBar .logo {
+.top-bar .container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
   width: 128px;
   height: 38px;
   background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/d%E2%80%99Perfume.png");
@@ -120,64 +124,59 @@ body {
   overflow: hidden;
   background-repeat: no-repeat;
 }
-.topBar li {
+
+.tools li, .rwd-menu li {
   margin-left: 32px;
   padding: 20px 0;
 }
-.topBar li a {
+.tools li a, .rwd-menu li a {
   color: #8D8D8D;
 }
-.topBar li a .material-icons {
+.tools li a .material-icons, .rwd-menu li a .material-icons {
   vertical-align: text-top;
+  width: 16px;
+  height: 16px;
   padding-right: 8px;
   color: #8D8D8D;
 }
-.topBar li a:hover, .topBar li a .material-icons:hover {
+.tools li a:hover, .tools li a .material-icons:hover, .rwd-menu li a:hover, .rwd-menu li a .material-icons:hover {
   color: #000000;
 }
-.topBar .rwd-menu-list {
-  display: none;
+
+.hamburger {
+  color: #8D8D8D;
+  margin-right: 10px;
+}
+.hamburger:hover {
+  cursor: pointer;
 }
 
 .rwd-cart {
   position: relative;
 }
-.rwd-cart em {
+.rwd-cart .num {
   font-size: 12px;
-  line-height: 13px;
-  width: 16px;
-  height: 13px;
+  line-height: 1px;
   text-align: center;
   position: absolute;
   display: block;
-  top: 15px;
-  right: 0px;
+  top: 13px;
+  right: -20px;
   background-color: #916000;
   color: white;
-  border-radius: 7px;
-}
-
-.hamburger p {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 30px;
-  border: 2px solid #8D8D8D;
-  border-radius: 5px;
-  background-color: #8D8D8D;
-  margin-top: 4px;
+  padding: 8px;
+  border-radius: 50%;
 }
 
 .rwd-menu-list {
+  display: none;
   position: absolute;
-  max-width: 100%;
-  top: 70px;
-  right: 0;
+  top: 100%;
   left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 .rwd-menu-list li {
-  margin: 0 auto;
-  padding: 6px 0;
-  width: 100%;
   text-align: center;
   border-bottom: 1px solid white;
   background-color: #707070;
@@ -185,10 +184,9 @@ body {
 .rwd-menu-list li:hover {
   background-color: #000000;
 }
-.rwd-menu-list li a {
-  color: white;
-}
-.rwd-menu-list li a:hover {
+.rwd-menu-list a {
+  padding: 6px 0;
+  width: 100%;
   color: white;
 }
 
@@ -199,170 +197,123 @@ body {
   background-position: center;
   background-attachment: fixed;
 }
-.banner .txt1-container {
-  margin-top: 295px;
-}
-.banner .txt1 {
+
+.txt1 {
   color: white;
 }
-.banner .txt1 h2 {
+.txt1 h2 {
   font-size: 40px;
-  line-height: 60px;
 }
-.banner .txt1 p {
+.txt1 p {
   font-size: 24px;
-  line-height: 36px;
 }
-.banner .txt1 a {
+.txt1 a {
   font-size: 28px;
   color: white;
-  width: 350px;
   padding: 13px 0px;
   margin-top: 20px;
 }
-.banner .txt1 a:hover {
+.txt1 a:hover {
   background-color: rgba(255, 255, 255, 0.205);
 }
 
 @media (max-width: 376px) {
   .banner {
-    height: 550px;
+    height: 480px;
     background-position: -150px 10px;
   }
-  .banner .txt1-container {
-    margin-top: 171px;
-  }
-
-  .fxdc {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .banner .container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 .product-list1 {
   margin-top: 60px;
 }
-.product-list1 .txt2 {
-  margin: 129px 55px 0;
+
+.txt2 {
   font-size: 20px;
-  line-height: 30px;
 }
-.product-list1 .txt2 h3 {
+.txt2 h3 {
   font-size: 32px;
-  line-height: 48px;
 }
-.product-list1 .txt3-container {
-  padding: 40px 0;
-  margin: 0 auto;
-}
-.product-list1 .txt3-container .txt3 {
+
+.txt3 {
   margin-top: 52px;
   font-size: 24px;
-  line-height: 36px;
 }
-.product-list1 .txt3-container .txt3 p {
+.txt3 p {
   font-size: 16px;
-  line-height: 24px;
   margin-top: 4px;
 }
-.product-list1 .txt3-container a {
+
+.img_container1 {
+  height: 555px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.img_container2 {
+  height: 1080px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.pd3 {
+  -o-object-position: -80px;
+     object-position: -80px;
+}
+
+.product-list1-long .btn {
   margin-top: 60px;
   border: 2px black solid;
   padding: 18px;
   max-width: 350px;
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 20px;
   color: black;
 }
-.product-list1 .txt3-container a:hover {
+.product-list1-long .btn:hover {
   background-color: rgba(0, 0, 0, 0.055);
 }
-.product-list1 .img_container1 {
-  width: 555px;
-  height: 555px;
-}
-.product-list1 .img_container2 {
-  width: 555px;
-  height: 1080px;
-}
-.product-list1 .pd1 {
-  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index2.jpg");
-}
-.product-list1 .pd2 {
-  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index3.png");
-}
-.product-list1 .pd3 {
-  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index4.jpg");
-}
-.product-list1 .pd4 {
-  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index5.jpg");
-  background-position: -80px 0px;
-}
 
-@media (max-width: 830px) {
-  .product-list1 .pd1, .product-list1 .pd2, .product-list1 .pd3, .product-list1 .pd4 {
-    max-width: 100%;
+@media (max-width: 992px) {
+  .img_container1, .img_container2 {
     background-position: center;
+    margin: 0 auto;
+    margin-top: 32px;
   }
-  .product-list1 .rr {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
-  .product-list1 .txt2 {
-    max-width: 400px;
-    padding-top: 8px;
-    padding-bottom: 32px;
-    margin: 0;
-  }
-  .product-list1 .more {
+
+  .txt2 {
     margin-top: 8px;
   }
 
-  .fxdc {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .more {
+    margin-top: 8px;
   }
 }
 @media (max-width: 376px) {
-  .product-list1 .pd1, .product-list1 .pd2, .product-list1 .pd3, .product-list1 .pd4 {
-    height: 350px;
-  }
-  .product-list1 .pd3 {
-    background-position: -60px;
-  }
-  .product-list1 .pd4 {
-    height: 680px;
-  }
-  .product-list1 .txt2 {
-    padding-bottom: 32px;
-  }
-  .product-list1 .txt3-container {
-    padding-top: 8px;
-  }
-  .product-list1 .txt3-container .txt3 {
-    margin-top: 0px;
-    margin-bottom: 20px;
+  .product-list1 {
+    margin-top: 12px;
   }
 
-  .fxdc {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .img_container1 {
+    height: 350px;
+  }
+
+  .img_container2 {
+    height: 680px;
+  }
+
+  .txt2 {
+    margin-top: 8px;
+  }
+
+  .txt3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
 }
 .bc-gray {
@@ -370,15 +321,13 @@ body {
   margin-top: 60px;
   padding: 40px 0;
   font-size: 16px;
-  line-height: 24px;
 }
 .bc-gray h3 {
   font-size: 24px;
-  line-height: 36px;
   margin-top: 8px;
 }
 .bc-gray .price {
-  padding-top: 16px;
+  margin-top: 16px;
 }
 .bc-gray .price span {
   margin-left: 8px;
@@ -386,41 +335,20 @@ body {
   text-decoration: line-through;
 }
 .bc-gray .img_container3 {
-  width: 350px;
   height: 540px;
-  background-size: cover;
-}
-.bc-gray .pd5 {
-  background-position: 0 -150px;
-  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index6.jpg");
-}
-.bc-gray .pd6 {
-  background-position: 0 -120px;
-  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index7.jpg");
-}
-.bc-gray .pd7 {
-  background-position: center;
-  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index8.jpg");
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
-@media (max-width: 830px) {
+@media (max-width: 992px) {
   .bc-gray {
-    margin-top: 0;
+    margin-top: 40px;
     padding: 0;
     padding-bottom: 36px;
   }
-  .bc-gray .img_container3 {
-    width: 345px;
-    height: 350px;
-  }
-  .bc-gray li {
-    padding-top: 24px;
-  }
-  .bc-gray .price {
-    padding-top: 4px;
-  }
-
-  .fxdc {
+  .bc-gray ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -429,69 +357,54 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
+  .bc-gray li {
+    margin-top: 24px;
+  }
+  .bc-gray .price {
+    margin-top: 4px;
+  }
 }
+.tst {
+  border: 1px solid black;
+}
+
 .txt4-container {
-  max-width: 350px;
   margin-top: 142px;
-  margin-left: 30px;
 }
 
 .txt4 {
   font-size: 16px;
-  line-height: 24px;
 }
 .txt4 h3 {
   font-size: 32px;
-  line-height: 48px;
 }
 .txt4 p {
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 .txt4 .more {
   margin-top: 8px;
 }
 
-.pd8 {
-  margin-top: 60px;
-  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index9.jpg");
-}
-
 .img_container4 {
-  width: 730px;
   height: 520px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  margin-top: 60px;
 }
 
-@media (max-width: 830px) {
-  .txt4-container {
-    margin: 0;
-  }
-
+@media (max-width: 992px) {
   .txt4 p {
-    padding-bottom: 8px;
-  }
-
-  .pd8 {
-    margin-top: 40px;
-    max-width: 100%;
-    background-position: -200px;
+    margin-bottom: 8px;
   }
 
   .img_container4 {
-    width: 555px;
+    margin-top: 40px;
   }
 
   .txt4-container {
     margin-top: 8px;
-  }
-
-  .fxdc {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 .footer-banner {
@@ -499,14 +412,23 @@ body {
   height: 600px;
   background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index10.jpg");
   background-position: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 .footer-banner .txt5 {
-  padding-top: 312px;
   color: #8D8D8D;
   font-size: 32px;
-  line-height: 48px;
 }
-.footer-banner input {
+.footer-banner .subscribe {
+  width: 350px;
+  margin-bottom: 112px;
+}
+.footer-banner .subscribe input {
   height: 60px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -514,83 +436,74 @@ body {
   border: 2px solid #916000;
 }
 .footer-banner .mail {
+  max-width: 219px;
+  width: 100%;
   padding: 20px 57px 21px 16px;
   font-size: 16px;
-  line-height: 24px;
-  width: 219px;
 }
-.footer-banner .subscribe {
-  width: 131px;
+.footer-banner .subscribeBtn {
+  max-width: 131px;
+  width: 100%;
   height: 60px;
   background-color: #916000;
   color: white;
   border-radius: 0px 4px 4px 0px;
-  margin-left: -8px;
 }
-.footer-banner .subscribe:hover {
+.footer-banner .subscribeBtn:hover {
   cursor: pointer;
   background-color: #6C4700;
 }
 
-@media (max-width: 830px) {
+@media (max-width: 992px) {
   .footer-banner {
     margin-top: 40px;
     background-position: left;
   }
-  .footer-banner .mail {
-    width: 216px;
-  }
-  .footer-banner .subscribe {
-    width: 129px;
+  .footer-banner h2, .footer-banner .subscribe {
+    margin-left: 20px;
   }
 
-  .fxdc {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .mail {
+    width: 216px;
+  }
+
+  .subscribeBtn {
+    width: 129px;
+  }
+}
+@media (max-width: 376px) {
+  .footer-banner h2, .footer-banner .subscribe {
+    margin-left: 0px;
   }
 }
 .footer {
   background-color: #916000;
   color: white;
 }
-.footer .mt-mb-32 {
+.footer .margin-top-bottom-32 {
   margin-top: 32px;
   margin-bottom: 32px;
 }
 .footer .logo {
-  width: 128px;
-  height: 38px;
   margin-top: 20px;
   background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/d%E2%80%99Perfumewhite.png");
-  display: block;
-  text-indent: 110%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-repeat: no-repeat;
 }
-.footer .txt6 {
+
+.txt6 {
   font-size: 14px;
-  line-height: 21px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
-.footer .social li {
-  margin-left: 36px;
+
+.social a {
+  padding-left: 36px;
   font-size: 20px;
-  line-height: 30px;
-}
-.footer .social a {
   color: white;
 }
-.footer .social a:hover {
+.social a:hover {
   color: #E0E0E0;
 }
 
-@media (max-width: 830px) {
+@media (max-width: 992px) {
   .logo {
     margin-left: 20px;
   }
@@ -598,29 +511,14 @@ body {
   .social {
     margin-right: 20px;
   }
-
-  .fxdc {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+}
+@media (max-width: 576px) {
+  .social {
+    display: none;
   }
 }
 @media (max-width: 376px) {
   .logo {
     margin: 0;
-  }
-
-  .fxdc {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }/*# sourceMappingURL=all.css.map */
