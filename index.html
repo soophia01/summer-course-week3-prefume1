@@ -73,7 +73,7 @@
     <div class="banner bg d-flex flex-wrap">
         <div class="container d-flex flex-wrap align-items-center ">
             <ul class="txt1 row justify-content-end">
-                <li class="col-sm-5 col-12">
+                <li class="col-lg-5 col-sm-6 col-12">
                     <h2 class="bold">Perfume your day</h2>
                     <p>A perfume is like a piece of clothing, a message, a way of presenting oneself a costume that according to the person who wears it.</p>
                     <a class="btn col-12" href="#">Shop now</a>
@@ -153,7 +153,7 @@
             <ul class="d-flex flex-wrap row
                         justify-content-between
                         flex-column flex-sm-column flex-lg-row">
-                <li class="col-md-4 col-sm-9 col-12
+                <li class="col-lg-4 col-md-6 col-sm-9 col-12
                             d-flex flex-wrap
                             flex-column flex-sm-column
                             justify-content-sm-center">
@@ -162,7 +162,7 @@
                     <p>Jo Malone</p>
                     <p class="price">NT$1,380<span>NT$1,580</span></p>
                 </li>
-                <li class="col-md-4 col-sm-9 col-12
+                <li class="col-lg-4 col-md-6 col-sm-9 col-12
                             d-flex flex-wrap
                             flex-column flex-sm-column
                             justify-content-sm-center">
@@ -171,7 +171,7 @@
                     <p>Curology</p>
                     <p class="price">NT$1,580</p>
                 </li>
-                <li class="col-md-4 col-sm-9 col-12
+                <li class="col-lg-4 col-md-6 col-sm-9 col-12
                             d-flex flex-wrap
                             flex-column flex-sm-column
                             justify-content-sm-center">
@@ -201,21 +201,25 @@
         </ul>
     </div>
 
-    <div class="footer-banner bg d-flex flex-wrap">
+    <div class="footer-banner bg d-flex flex-wrap
+                flex-column justify-content-end">
         <div class="container">
             <h2 class="txt5 bold">記得<br>
                 訂閱以獲取更多資訊
             </h2>
-            <div class="subscribe d-flex flex-wrap">
-                <input id="mail" class="mail" type="email" placeholder="Your email address">
+            <div class="row">
+                <div class="subscribe d-flex col-sm-12 col-12">
+                    <input class="mail col-md-3 col-sm-5 col-8" type="email" placeholder="Your email address">
 
-                <input class="subscribeBtn" type="submit" value="Subscribe">
+                    <input class="subscribeBtn col-md-2 col-sm-3 col-4" type="submit" value="Subscribe">
+                </div>
             </div>
         </div>
     </div>
 
     <div class="footer">
-        <div class="container d-flex flex-wrap justify-content-between">
+        <div class="container d-flex flex-wrap
+                    justify-content-between">
             <div class="d-flex flex-wrap">
                 <h2>
                     <a class="logo" href="#">D'Prefume</a>
@@ -223,7 +227,9 @@
                 <p class="txt6 margin-top-bottom-32">© 2020. All Rights Reserved.</p>
             </div>
             
-            <div class="social margin-top-bottom-32 d-flex flex-wrap">
+            <div class="social margin-top-bottom-32
+                        d-flex flex-wrap
+                        d-none d-xl-flex d-lg-flex d-md-flex">
                 <a href="#">Product</a>
                 <a href="#">Blog</a>
                 <a href="#">Contact</a>
