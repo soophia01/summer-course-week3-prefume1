@@ -4,7 +4,7 @@
     height: 52px;
     a{
         color: white;
-        margin: 14px 14px 0 28px;
+        margin: 14px 14px 28px 0;
         &:hover{
             color: #dbdbdb;
         }
@@ -37,7 +37,7 @@
 
 .product1-tools{
     margin-top: 3px;
-    a{
+    span{
         color: #916019;
         &:hover{
             color: #AC8A46;

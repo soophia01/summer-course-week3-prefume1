@@ -24,17 +24,17 @@
     padding: 20px 0;
     a{
         color: #8D8D8D;
-        .material-icons{
-            vertical-align: text-top;// 跟文字對齊
-            width: 16px;
-            height: 16px;
-            padding-right: $px-2;
-            color: #8D8D8D;
-        }
         &:hover,.material-icons:hover{
             color: #000000;
         }
     }
+}
+.material-icons{
+    vertical-align: text-top;// 跟文字對齊
+    width: 16px;
+    height: 16px;
+    padding-right: $px-2;
+    color: #8D8D8D;
 }
 .hamburger{
     color: #8D8D8D;
@@ -135,9 +135,7 @@
         margin-bottom: 112px;
         input{
             height: 60px;
-            box-sizing: border-box;
             margin-top: $px-5;
-            border: 2px solid #916000;
         }
     }
     .mail{
