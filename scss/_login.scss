@@ -1,0 +1,75 @@
+.login-container{
+    margin-top: 80px;
+    margin-bottom: 82px;
+}
+.login-img-container{
+    object-fit: cover;
+    height: 730px;
+}
+.login-txt{
+    margin-top: 211px; //291-80
+    h3{
+        font-size: 32px;
+    }
+    .register-btn, .login-btn, a{
+        margin-top: $px-9;
+        color: #916000;
+    }
+    .register-btn, .login-btn{
+        padding: 8px 16px;
+        border-radius: 3px;
+    }
+    .register-btn{
+        margin-right: 8px;
+        background-color: #FFFFFF;
+        &:hover{
+            background-color: #916000;
+            color: white;
+        }
+    }
+    .login-btn{
+        background-color: #6C4700;
+        color: white;
+        border: 1px #6C4700 solid;
+        &:hover{
+            background-color: #FFFFFF;
+            color: #6C4700;
+        }
+    }
+    a{
+        &:hover{
+            color: #6C4700;
+        }
+    }
+}
+.login-input{
+    border: #CED4DA 1px solid;
+    border-radius: 3px;
+    padding: 9px 0px 10px 12px;
+    margin-top: $px-1;
+}
+.login-mail-label{
+    margin-top: $px-3;
+}
+.login-pwd-label{
+    margin-top: $px-5;
+}
+
+
+
+@include pad-768{
+    .login-container{
+        margin-top: 40px;
+        margin-bottom: 0px;
+    }
+    .login-img-container{
+        height: 220px;
+    }
+    .login-txt{
+        margin-top: 28px;
+        ul{
+            margin-bottom: 106px;
+        }
+    }
+}
+
