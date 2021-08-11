@@ -51,6 +51,10 @@
         color: white;
         // padding: 14px 55px;
         text-align: center;
+        &:hover{
+            cursor: pointer;
+            background-color: #6C4700;
+        }
     }
     .add-fav{
         margin-top: $px-2;

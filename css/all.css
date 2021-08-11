@@ -651,6 +651,10 @@ h3 {
   color: white;
   text-align: center;
 }
+.chanel-right-txt .add-chart-btn:hover, .chanel-rwd-middle-txt .add-chart-btn:hover {
+  cursor: pointer;
+  background-color: #6C4700;
+}
 .chanel-right-txt .add-fav, .chanel-rwd-middle-txt .add-fav {
   margin-top: 8px;
 }
