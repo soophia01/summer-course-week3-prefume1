@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+     <!-- google font -->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!-- BS -->
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <!-- 自訂 -->
+     <link rel="stylesheet" href="css/all.css">
+     <script src="js/jquery-3.6.0.min.js"></script>
+
+    <title>Perfume</title>
+</head>
+<body>
+    <!--top-bar-->
+    <div class="top-bar">
+        <div class="container d-flex flex-wrap justify-content-between">
+            <h1><a class="logo" href="index.html">D'Prefume</a></h1>
+            <!-- PC menu -->
+            <ul class="tools flex-wrap d-none d-lg-flex d-xl-flex d-xxl-flex me-lg-2">
+                <li class="d-flex flex-wrap">
+                    <a href="product1.html">
+                        <span class="material-icons  me-2">store</span>Product
+                    </a>
+                </li>
+                <li class="d-flex flex-wrap">
+                    <a href="login.html">
+                        <span class="material-icons me-2">person</span>Log in
+                    </a>
+                </li>
+                <li class="d-flex flex-wrap">
+                    <a href="#">
+                        <span class="material-icons me-2">favorite</span>Wishlist
+                    </a>
+                </li>
+                <li class="d-flex flex-wrap">
+                    <a href="#">
+                        <span class="material-icons me-2">shopping_cart</span>Cart(3)
+                    </a>
+                </li>
+            </ul>
+
+             <!-- mobile menu -->
+            <ul class="rwd-menu justify-content-end d-flex d-lg-none d-xl-none d-xxl-none">
+                <li class="rwd-cart">
+                    <a href="#">
+                        <span class="material-icons">shopping_cart</span>
+                        <span class="num">3</span>
+                    </a>
+                </li>
+                <!-- 漢堡選單 -->
+                <li class="hamburger">
+                    <span class="material-icons">
+                        menu
+                    </span>
+                </li>
+            </ul>
+            
+            <!-- 下拉選單 -->
+            <ul class="rwd-menu-list flex-column">
+                <li><a href="product1.html">Product</a></li>
+                <li><a href="#">Wishlist</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="login.html">Log in</a></li>
+            </ul>  
+        </div>
+    </div>
+
+    <!-- top-bar2 -->
+    <div class="top-bar2
+                d-none d-sm-none d-md-none
+                d-lg-flex d-xl-flex d-xxl-flex">
+        <ul class="container d-flex">
+            <li><a href="chanel.html">CHANEL</a></li>
+            <li><a href="#">Jo Malone</a></li>
+            <li><a href="#">Curology</a></li>
+            <li><a href="#">Dior</a></li>
+            <li><a href="#">Chloe</a></li>
+            <li><a href="#">ZARA</a></li>
+        </ul>
+    </div>
+
+    <div class="member-container container">
+        <div class="row d-flex">
+            <div class="col-md-2 col-sm-12
+                        d-inline-flex flex-md-column flex-row
+                        justify-content-between justify-content-md-start">
+                <h2 class="bold d-none
+                            d-md-flex">會員中心</h2>
+                <a class="left-menu-1 bold" href="#">會員資料修改</a>
+                <a class="left-menu-2 bold" href="#">訂單查詢</a>
+                <a class="left-menu-3 bold" href="#">退／換貨申請</a>
+            </div>
+            
+            <div class="d-flex col-md-10">
+                <div class="member-modify col-md-7 col-12">
+                    <!-- 個人資料修改 -->
+                    <h4 class="bold col-md-10 col-sm-12 col-12">個人資料修改</h4>
+                    <form class="col-md-8 col-11" action="#">
+                        <div class="row  member-account">
+                            <p class="col-md-4">會員帳號</p>
+                            <p class="col-md-8">email@example.com</p>
+                        </div>
+
+                        <div class="row">
+                            <label class="col-md-4" for="member-name">會員姓名</label>
+                            <input class="col-md-8" type="text" name="" id="member-name">
+                        </div>
+
+                        <!-- 會員性別 -->
+                        <div class="row">
+                            <label class="col-md-4" for="member-gender">會員性別</label>
+                            <select class="col-md-8" name="gender" id="member-gender">
+                                <option value="girl">女</option>
+                                <option value="boy">男</option>
+                            </select>
+                        </div>
+
+                        <!-- 電子信箱 -->
+                        <div class="row">
+                            <label class="col-md-4" for="member-mail">電子信箱</label>
+                            <input class="col-md-8" type="email" name="" id="member-mail" placeholder="email@example.com">
+                        </div>
+
+                        <!-- 手機號碼 -->
+                        <div class="row">
+                            <label class="col-md-4" for="member-phone">手機號碼</label>
+                            <input class="col-md-8" type="tel" name="" id="member-phone">
+                        </div>
+
+                        <!-- 聯絡地址 -->
+                        <div class="row d-flex flex-wrap">
+                            <label class="col-md-4" for="member-address">聯絡地址</label>
+                            
+                            <select class="col-md-4" name="address" id="member-address">
+                                <option value="台灣及離島">台灣及離島</option>
+                                <option value="日本">日本</option>
+                            </select>
+                            <div class="col-md-4"></div>
+                            
+                            <div class="col-md-4"></div>
+                            <select class="col-md-4" name="address" id="member-address">
+                                <option value="高雄市">高雄市</option>
+                                <option value="新北市">新北市</option>
+                            </select>
+
+                            <select class="col-md-4 ps-2" name="address" id="member-address">
+                                <option value="鹽埕區">鹽埕區</option>
+                                <option value="鼓山區">鼓山區</option>
+                            </select>
+
+                            <div class="col-md-4"></div>
+                            <input class="col-md-8" type="text" name="" id="member-address" placeholder="請輸入地址">
+
+                            <div class="col-md-4"></div>
+                            <div class="col-md-8">
+                                <input class="check" type="checkbox" name="subscribe" id="yes">我願意收到最新優惠情報
+                            </div>
+                        </div>
+
+                        <!-- 配送地址 -->
+                        <div class="row d-flex flex-wrap">
+                            <label class="col-md-4" for="member-delivery">配送地址</label>
+                            
+                            <select class="col-md-4" name="delivery" id="member-delivery">
+                                <option value="台灣及離島">台灣及離島</option>
+                                <option value="日本">日本</option>
+                            </select>
+                            <div class="col-md-4"></div>
+                            
+                            <div class="col-md-4"></div>
+                            <select class="col-md-4" name="delivery" id="member-delivery">
+                                <option value="高雄市">高雄市</option>
+                                <option value="新北市">新北市</option>
+                            </select>
+
+                            <select class="col-md-4" name="delivery" id="member-delivery">
+                                <option value="鹽埕區">鹽埕區</option>
+                                <option value="鼓山區">鼓山區</option>
+                            </select>
+
+                            <div class="col-md-4"></div>
+                            <input class="col-md-8" type="text" name="" id="member-delivery" placeholder="請輸入地址">
+
+                            <div class="col-md-4"></div>
+                            <input class="member-btn col-md-4"  type="submit" value="確定修改">
+
+                        </div>
+                    </form>
+
+                    <!-- 修改密碼 -->
+                    <h4 class="bold col-md-10">修改密碼</h4>
+                    <form class="col-md-8" action="#">
+                        <div class="row">
+                            <label class="col-md-4" for="member-pwd-old">舊密碼</label>
+                            <input class="col-md-8" type="password" name="" id="member-pwd-old">
+                        </div>
+
+                        <div class="row">
+                            <label class="col-md-4" for="member-pwd-new">新密碼</label>
+                            <input class="col-md-8" type="password" name="" id="member-pwd-new">
+                        </div>
+
+                        <div class="row">
+                            <label class="col-md-4" for="member-pwd-confirm">確認密碼</label>
+                            <input class="col-md-8" type="password" name="" id="member-pwd-confirm">
+                            
+                            <div class="col-md-4"></div>
+                            <input class="member-btn col-md-4"  type="submit" value="變更密碼">
+
+                        </div>
+                    </form>
+                </div>
+
+                <div class="member-info col-md-3">
+                    <div class="row d-inline-flex">
+                        <p>
+                            <span class="material-icons me-2">person</span>
+                            會員編碼 T00020080615
+                        </p>
+                    </div>
+                    <div class="row">
+                        <p class="member-chart-num col-md-5">購物車</p>
+                        <p class="col-md-4">23</p>
+                    </div>
+                    <div class="row">
+                        <p class="col-md-5">我的收藏</p>
+                        <p class="col-md-4">56</p>
+                    </div>
+                    <div class="row">
+                        <p class="col-md-5">完成訂單</p>
+                        <p class="col-md-4">8</p>
+                    </div>
+                    <div class="row">
+                        <p class="col-md-5">會員紅利</p>
+                        <p class="col-md-4">2680</p>
+                    </div>
+                    <div class="row">
+                        <p class="col-md-5">邀請碼</p>
+                        <p class="col-md-4">TK2075</p>
+                        <p class="member-hint">新戶輸入邀請碼即可獲贈紅利點數1000點</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="container d-flex flex-wrap
+                    justify-content-between">
+            <div class="d-flex flex-wrap">
+                <h2>
+                    <a class="logo" href="index.html">D'Prefume</a>
+                </h2>
+                <p class="txt6 margin-top-bottom-32">© 2020. All Rights Reserved.</p>
+            </div>
+            
+            <div class="social margin-top-bottom-32
+                        d-flex flex-wrap
+                        d-none d-xl-flex d-lg-flex d-md-flex">
+                <a href="product1.html">Product</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.js"></script>
+</body>
+</html>
